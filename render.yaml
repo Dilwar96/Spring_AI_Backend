@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: springai-backend
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PORT
+        value: 8080
